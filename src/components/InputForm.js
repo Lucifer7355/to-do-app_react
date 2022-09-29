@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form, FormGroup, Input, InputGroup, InputGroupAddon, Button, Container } from 'reactstrap'
+import { Form, FormGroup, Button } from 'reactstrap'
 import { v4 } from 'uuid'
 
 
@@ -20,14 +20,14 @@ const InputForm = ({ addTodos }) => {
     return (
         <Form onSubmit={handleSubmit}>
             <FormGroup>
-                <InputGroup>
-                    <Input type="text" name="todo" id="todo" placeholder="Enter To-do" value={todoString} onChange={e => setTodostring(e.target.value)} />
-                    <InputGroupAddon addonType="prepend" >
+                <span>
+                    <input type="text" name="todo" id="todo" placeholder="Enter To-do" value={todoString} onChange={e => setTodostring(e.target.value)} />
+                    <span addonType="prepend" >
                         <Button color="warning">
                             Add
                         </Button>
-                    </InputGroupAddon>
-                </InputGroup>
+                    </span>
+                </span>
             </FormGroup>
         </Form>
     )
